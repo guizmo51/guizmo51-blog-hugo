@@ -10,9 +10,12 @@ name="Qui suis-je?"
 [[menu.main]]
 url="/retours-dexperiences"
 name="Retours d'expériences"
+title="Retours d'expériences"
 [[menu.main]]
 url="/hacks"
-name="hacks"
+name="Hacks"
+title="Hacks"
 [[menu.main]]
 url="/hors-sujet"
 name="Hors-sujet"
+title="Hors-sujet"

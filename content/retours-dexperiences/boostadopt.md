@@ -23,7 +23,7 @@ Exemples d'url :
 "http://adopteunmec.com/api/users/XXXXX" "visite du profil XXXXX"
 L'API permet aussi de charmer et d'envoyer des messages (possible si on a au préalable été autorisé).
 
-Puis tout le projet initial a été converti en utilisant du JSON comme données en entrées. Cela rendait l'application plus rapide puisqu'au lieu de charger des pages HTML de plusieurs Mo l'appel je chargeais du json de quelques Ko.
+Tout le projet initial a donc été converti en utilisant du JSON comme données en entrées. Cela rendait l'application plus rapide puisqu'au lieu de charger des pages HTML de plusieurs Mo l'appel je chargeais du json de quelques Ko.
 
 désormais tout fonctionnait : un script php faisait tout le boulot.
 
@@ -38,7 +38,7 @@ J'ai opté pour la dernière solution : réaliser un client Javascript qui se co
 
 Pendant de long mois j'ai cherché les solutions permettant d'effectuer des appels Ajax vers les serveurs d'AdopteUnMec. 
 Bien sur la première étape est le cross-origin : c'est une sécurité implémentée dans chaque navigateur. Elle s'assure qu'un navigateur ne se connecte pas à un serveur que ce dernier n'a pas autorisé. Cette sécurité est contournable en modifiant les options de chaque navigateur mais pas très confortable pour l'utilisateur. 
-Une autre solution envisagée était de faire une requete en JSONP pour JSON with Padding. Cela est faisable ainsi grace au fait que le navigateur ne controle pas le "same-origin" pour les scripts. J'ai renoncé à utiliser cette technique car elle nécessite de rajouter le padding sur les données coté serveur ce que je ne peux bien sur pas faire.
+Une autre solution envisagée était de faire une requete en [JSONP pour JSON with Padding](http://en.wikipedia.org/wiki/JSONP). Cela est faisable ainsi grace au fait que le navigateur ne controle pas le "same-origin" pour les scripts. J'ai renoncé à utiliser cette technique car elle nécessite de rajouter le padding sur les données coté serveur ce que je ne peux bien sur pas faire.
 j'ai trouvé la oslution finale par hasard : je me suis aperçu que des extensions Chrome pouvaient faire des appels à des serveurs sans déclencher ce problème de "cross-origin". Il faut toutefois que les urls des serveurs soient déclarées dans le manifest de l'extension. J'ai donc decidé de faire une extension Chrome pour effectuer tous les appels aux serveurs d'AdopteUnmec.
 
 Bien que cette solution ne soit pas idéale car elle oblige à utiliser Chrome j'ai décidé de l'expérimenter pour lancer mon projet boostAdopt. 
