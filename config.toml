@@ -1,3 +1,15 @@
 baseurl = "http://yourSiteHere/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+languageCode = "fr-fr"
+title = "Simon Blum"
+[[menu.main]]
+url="apropos"
+name="Edito"
+[[menu.main]]
+url="quisuisje"
+name="Qui suis-je?"
+[[menu.main]]
+url="retours-dexperiences"
+name="Retours d'expériences"
+[[menu.main]]
+url="hors-sujet"
+name="Hors-sujet"
